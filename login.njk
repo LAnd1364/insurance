@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="iw" dir="rtl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Insurance login</title>
+   <link rel="stylesheet" href="css/login.min.css">
+</head>
+<body>
+   <div class="container">
+      {% include 'app/module/_header/_header.njk' %}
+      <section class="login">
+         <div class="login__top">םולש, <span>השמ םייח </span></div>
+         <div class="login__inner">
+            <div class="login__content">
+               <h1 class="login__title">ריחמה תעצהב היפצ - תכרעמל הסינכ</h1>
+               <p class="login__subtitle">שדח דוק תחילש לע ץחל דוק תלביק אל םא ,הסינכה דוק תא ןזה </p>
+               <form class="login-form">
+                  <label class="login-form__label">
+                     <span>שמתשמ םש</span>
+                     <input class="login-form__item login-form__input" type="text" minlength="4" autofocus required>
+                  </label>
+                  <label class="login-form__label">
+                     <span>אמסיס</span>
+                     <input class="login-form__item login-form__input" type="password" minlength="8" required>
+                  </label>
+                  <div class="login-form__button-box">
+                     <a class="login-form__item login-form__link" href="#">לוטיב</a>
+                     <button class="login-form__item login-form__btn" type="submit">
+                        <span>הסינכ</span>
+                        {% include 'app/module/_icons/_delta.njk' %}
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </section>
+   </div>
+   
+   <script src="js/main.min.js"></script>
+</body>
+</html>

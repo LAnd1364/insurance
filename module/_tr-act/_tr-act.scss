@@ -1,0 +1,108 @@
+.tr-act {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 101px;
+  position: absolute;
+  right: -113px;
+  top: 0;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 48px;
+    :hover path {
+      fill: $active;
+    }
+  }
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 3px;
+  }
+  &__desc {
+    color: #fff;
+  }
+}
+.pen-icon path,
+.envelop-icon path {
+  transition: all .3s;
+}
+.icon-highlight path {
+  fill: $active;
+}
+// ---------------------------------------------------1050-----------------------------------------------------
+@media (max-width: 1050px) {
+  .tr-act {
+    width: 95px;
+    right: -105px;
+    &__img-box {
+      width: 32px;
+      height: 32px;
+      .pen-icon {
+        width: 14px;
+        height: 14px;
+      }
+      .envelop-icon {
+        width: 21px;
+        height: 12px;
+      }
+    }
+    &__desc {
+      font-size: 13px;
+    }
+  }
+}
+// ---------------------------------------------------1000-----------------------------------------------------
+@media (max-width: 1000px) {
+  div.tr-act::before {
+    display: none;
+  }
+  .tr-act {
+    flex-direction: column;
+    width: fit-content;
+    height: 136px;
+    text-align: center;
+    top: -156px;
+    right: -78px;
+    ::before {
+      display: none;
+    }
+    &__desc::before {
+      display: none;
+    }
+  }
+}
+// ---------------------------------------------------800-----------------------------------------------------
+@media (max-width: 800px) {
+  .tr-act {
+    visibility: visible;
+    flex-direction: row;
+    width: 95px;
+    top: 15px;
+    a path {
+      fill: #fff;
+    }
+    &__img-box {
+      width: 40px;
+      height: 40px;
+      background: $checked;
+      .pen-icon {
+        width: 19px;
+        height: 19px;
+      }
+      .envelop-icon {
+        width: 27px;
+        height: 21px;
+      }
+    }
+    &__desc {
+      display: none;
+    }
+  }
+}

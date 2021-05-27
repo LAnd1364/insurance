@@ -1,0 +1,45 @@
+.header {
+  padding: 36px 17px; 
+}
+.user {
+  display: flex;
+  &__profile {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 34px;
+   height: 34px;
+   background: $checked;
+   border-radius: 50%;
+   margin-inline-end: 10px;
+   transition: all .3s;
+   &:hover {
+     background: $hover;
+    }
+  }
+  &__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $checked;
+  }
+  &__data-detail {
+    font-weight: 700;
+  }
+}
+// ---------------------------------------------------1050-----------------------------------------------------
+@media (max-width: 1050px) {
+  .header {
+    padding: 17px 11px;
+  }
+  .user {
+    &__profile {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    &__data {
+      font-size: 12px;
+    }
+  }
+}

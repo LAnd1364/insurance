@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="iw" dir="rtl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Insurance</title>
+   <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body>
+   <div class="container">
+      {% include 'app/module/_header/_header.njk' %}
+      <section class="data">
+         <div class="data__inner">
+            <div class="tabs-box">
+               <img class="tabs-box__ava" src="images/user.png" alt="ava">
+               <div class="tabs-box__tabs">
+                  <h2 class="tabs-box__tab">
+                     <a class="tabs-box__link tabs-box__link--active" href="#table1">תונורחא תועצה</a>
+                  </h2>
+                  <h2 class="tabs-box__tab">
+                     <a class="tabs-box__link" href="#table2">וקפוהש תוסילופ</a>
+                  </h2>
+               </div>
+            </div>
+            <form class="search-form">
+               <div class="search-form__input-wrap">
+                  {% include 'app/module/_icons/_search.njk' %}
+                  <input class="search-form__input" type="search" placeholder="שופיח">
+               </div>
+               <button class="search-form__btn" type="submit">השדח העצה</button>
+            </form>
+            <table class="table table--active" id="table1">
+               <thead class="table__heads">
+                  <th class="table__head">ףנע</th>
+                  <th class="table__head">רצומ</th>
+                  <th class="table__head">חטובמ םש</th>
+                  <th class="table__head">יושיר ‘סמ</th>
+                  <th class="table__head">תוהז תדועת</th>
+                  <th class="table__head">העצהה תחיתפ</th>
+                  <th class="table__head">חוטיבה תליחת</th>
+                  <th class="table__head">הסילופ ‘סמ</th>
+                  <th class="table__head">חוקלל חלשנ</th>
+               </thead>
+               <tbody class="table__body">
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">12-345-67</td>
+                     <td class="table__data">039894872</td>
+                     <td class="table__data">12.10.2019</td>
+                     <td class="table__data">04.04.2020</td>
+                     <td class="table__data">123456789012</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+               </tbody>
+            </table>
+            <table class="table" id="table2">
+               <thead class="table__heads">
+                  <th class="table__head">ףנע</th>
+                  <th class="table__head">רצומ</th>
+                  <th class="table__head">חטובמ םש</th>
+                  <th class="table__head">יושיר ‘סמ</th>
+                  <th class="table__head">תוהז תדועת</th>
+                  <th class="table__head">העצהה תחיתפ</th>
+                  <th class="table__head">חוטיבה תליחת</th>
+                  <th class="table__head">הסילופ ‘סמ</th>
+                  <th class="table__head">חוקלל חלשנ</th>
+               </thead>
+               <tbody class="table__body">
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row table__row--checked">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+                  <tr class="table__row">
+                     <td class="table__data"><span>בכר</span>{% include 'app/module/_tr-act/_tr-act.njk' %}</td>
+                     <td class="table__data">רצומה םש</td>
+                     <td class="table__data">םהרבא ןב קחצי</td>
+                     <td class="table__data">22-345-66</td>
+                     <td class="table__data">139894873</td>
+                     <td class="table__data">22.10.2018</td>
+                     <td class="table__data">14.04.2019</td>
+                     <td class="table__data">012345678901</td>
+                     <td class="table__data">{% include 'app/module/_checked/_checked.njk' %}</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+   </div>
+   
+   <script src="js/main.min.js"></script>
+</body>
+</html>

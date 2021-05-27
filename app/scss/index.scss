@@ -1,0 +1,472 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import '../module/_header/_header';
+@import '../module/_tr-act/_tr-act';
+@import '../module/_checked/_checked';
+
+.data {
+  background-image: url(../images/data-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    max-width: 1300px;
+    padding: 35px 122px;
+    margin: 0 auto;
+  }
+}
+.tabs-box {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+  }
+  &__ava {
+    margin-inline-end: 26px;
+  }
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 58px;
+    background: #fff;
+    border-radius: 29px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 30px;
+    color: #5f5f5f;
+    background: #fff;
+    border-radius: 29px;
+    transition: all .3s;
+    &:hover {
+      color: #fff;
+      background: $active;
+    }
+    &--active {
+      color: #fff;
+      background: $active;
+    }
+  }
+}
+.search-form {
+  display: flex;
+  padding: 40px 0 20px;
+  &__input-wrap {
+    max-width: 754px;
+    width: 100%;
+    margin-inline-end: 31px;
+    position: relative;
+    .search-icon {
+      position: absolute;
+      left: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+      &--hide {
+        display: none;
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 58px;
+    font-size: 18px;
+    background: #fff;
+    padding: 0 25px;
+    border-radius: 29px;
+    &::placeholder {
+      color: b1b1b1;
+    }
+  }
+  &__btn {
+    max-width: 284px;
+    width: 100%;
+    height: 58px;
+    font-size: 24px;
+    color: #fff;
+    background: $checked;
+    border-radius: 29px;
+    position: relative;
+    transition: all .3s;
+    &:hover {
+      background: $hover;
+    }
+    &::after {
+      content: '';
+      width: 15px;
+      height: 17px;
+      background-image: url(../images/delta.svg);
+      position: absolute;
+      left: 15%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.table {
+  display: none;
+  width: 100%;
+  text-align: center;
+  border-spacing: 0 10px;
+  &--active {
+    display: inline-table;
+  }
+  &__heads {
+    color: #f5f5f5;
+  }
+  &__head {
+    height: 45px;
+  }
+  &__body {
+    color: #21325e;
+  }
+  &__row {
+    height: 45px;
+    background: #fff;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: $active;
+    }
+    &:hover .checked-mark__icon path {
+      stroke: #fff;
+    }
+    &:hover .checked-mark {
+      color: #fff;
+    }
+    &--checked .checked-mark {
+    display: block;
+    }
+  }
+  &__row--active {
+    .tr-act {
+      visibility: visible;
+    }
+  }
+  &__data {
+    padding: 0 5px;
+    position: relative;
+    &:first-child {
+      border-top-right-radius: 22px;
+      border-bottom-right-radius: 22px;
+    }
+    &:last-child {
+      border-top-left-radius: 22px;
+      border-bottom-left-radius: 22px;
+    }
+  }
+  &__data:not(:last-child) {
+    &::after {
+      content: '';
+      width: 1px;
+      height: 65%;
+      background: #e5e5e5;
+      position: absolute;
+      left: 0;
+      top: 53%;
+      transform: translateY(-50%);
+    }
+  }
+}
+// ---------------------------------------------------1050-----------------------------------------------------
+@media (max-width: 1050px) {
+  .data {
+    &__inner {
+      padding: 27px 115px;
+    }
+  }
+  .tabs-box {
+    padding-bottom: 26px;
+    &::after {
+      height: 3px;
+      bottom: -69px;
+    }
+    &__ava {
+      width: 58px;
+      height: 58px;
+      margin-inline-end: 12px;
+    }
+    &__tabs {
+      height: 40px;
+      border-radius: 20px;
+    }
+    &__link {
+      font-size: 18px;
+      border-radius: 20px;
+    }
+  }
+  .search-form {
+    padding: 0 0 46px;
+    &__input-wrap {
+      margin-inline-end: 17px;
+      .search-icon {
+        width: 19px;
+        height: 19px;
+        left: 14px;
+      }
+    }
+    &__input {
+      height: 40px;
+      border-radius: 20px;
+      padding: 0 18px;
+    }
+    &__btn {
+      max-width: 200px;
+      height: 40px;
+      font-size: 17px;
+      border-radius: 20px;
+    }
+  }
+  .table {
+    border-spacing: 0 5px;
+    &__head {
+      height: 32px;
+    }
+    &__row {
+      height: 32px;
+    }
+    &__head:first-child,
+    &__data:first-child {
+      display: block;
+      visibility: hidden;
+      width: 0;
+      padding: 0;
+      order: 1;
+    }
+    &__data:nth-child(2) {
+      border-top-right-radius: 22px;
+      border-bottom-right-radius: 22px;
+    }
+  }
+}
+// ---------------------------------------------------1000-----------------------------------------------------
+@media (max-width: 1000px) {
+  .data__inner {
+    padding: 27px 80px;
+  }
+  .search-form {
+    padding: 0 0 30px;
+  }
+  .table {
+    text-align: right;
+    &--active {
+      display: block;
+    }
+    &__heads,
+    &__head,
+    &__body,
+    &__data {
+      display: block;
+    }
+    &__heads {
+      position: absolute;
+      top: -500%;
+    }
+    &__row {
+      display: grid;
+      grid-template-columns: 22% 1fr 1fr 1fr;
+      font-size: 20px;
+      font-weight: 700;
+      grid-row: 2;
+      row-gap: 40px;
+      height: 121px;
+      padding: 30px 16px 0;
+      border-radius: 30px;
+      margin: 26px 0;
+      position: relative;
+      ::before {
+        font-size: 18px;
+        color: #797979;
+        position: absolute;
+        top: -21px;
+      }
+      :nth-child(2)::before {
+        content: 'ביטקלוק';
+      }
+      :nth-child(3)::before {
+        content: 'חטובמ םש';
+      }
+      :nth-child(4)::before {
+        content: 'יושיר רפסמ';
+      }
+      :nth-child(5)::before {
+        content: 'תוהז תדועת';
+      }
+      :nth-child(6)::before {
+        content: 'העצה תחיתפ';
+      }
+      :nth-child(7)::before {
+        content: 'חוטיב תליחת';
+      }
+      :nth-child(8)::before {
+        content: 'הסילופ';
+      }
+    }
+    &__row:hover {
+      .table__data::before {
+        color: currentColor;
+      }
+    }
+    &__row--checked {
+      .checked-mark__icon  {
+        display: none;
+      }
+      .checked-mark__text  {
+        font-size: 20px;
+      }
+    }
+    &__data {
+      padding: 0 8px;
+    }
+    &__data:not(:last-child) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+// ---------------------------------------------------800-----------------------------------------------------
+@media (max-width: 800px) {
+  .data__inner {
+    padding: 27px 24px;
+  }
+  .search-form {
+    &__btn {
+      max-width: 40px;
+      font-size: 0;
+      line-height: 0;
+      border-radius: 50%;
+      &::after {
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/plus.svg);
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .table {
+    &__row {
+      height: 214px;
+      padding: 104px 16px 25px;
+      &::before {
+        content: '';
+        width: 67px;
+        height: 25px;
+        background-image: url(../images/car.svg);
+        position: absolute;
+        top: 26px;
+        right: 20px;
+      }
+      &::after {
+        content: '';
+        width: calc(100% - 20px);
+        height: 2px;
+        background: #1d4076;
+        border-radius: 2px;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+      }
+      &:hover {
+        color: #21325e;
+        background: #fff;
+        .table__data::before {
+          color: #797979;
+        }
+        .checked-mark {
+          color: $checked;
+        }
+      }
+    }
+    &__data:first-child {
+      position: absolute;
+      left: 30px;
+    }
+  }
+}
+// ---------------------------------------------------680-----------------------------------------------------
+@media (max-width: 680px) {
+  .table {
+    &__row {
+      grid-template-columns: 1fr 1fr 27%;
+      height: 277px;
+    }
+  }
+}
+// ---------------------------------------------------520-----------------------------------------------------
+@media (max-width: 520px) {
+  .tabs-box {
+    &__ava {
+      display: none;
+    }
+  }
+  .table {
+    &__row {
+      grid-template-columns: repeat(2, 1fr);
+      height: 403px;
+      padding: 104px 16px 25px 10px;
+      :nth-child(2),
+      :nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+    &__data {
+      padding: 0 7px;
+    }
+  }
+}
+// ---------------------------------------------------410-----------------------------------------------------
+@media (max-width: 410px) {
+  .data__inner {
+    padding: 27px 20px;
+  }
+  .table {
+    &__row {
+      font-size: 19px;
+      padding: 104px 12px 25px 8px;
+      ::before {
+        font-size: 17px;
+      }
+      .checked-mark__text {
+        font-size: 19px;
+      }
+    }
+    &__data {
+      padding: 0 5px;
+    }
+  }
+}
+// ---------------------------------------------------360-----------------------------------------------------
+@media (max-width: 360px) {
+  .data__inner {
+    padding: 27px 14px;
+  }
+  .table {
+    &__row {
+      padding: 104px 8px 25px 5px;
+      .checked-mark__text {
+        font-size: 17px;
+      }
+    }
+    &__data {
+      padding: 0 4px;
+    }
+  }
+}

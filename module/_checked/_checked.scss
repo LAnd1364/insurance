@@ -1,0 +1,21 @@
+.checked-mark {
+  display: none;
+  color: $checked;
+  transition: all .3s;
+  & path {
+    transition: all .3s;
+  }
+  &__text {
+    font-size: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+// ---------------------------------------------------1050-----------------------------------------------------
+@media (max-width: 1050px) {
+  .checked-mark__icon {
+    width: 17px;
+    height: 14px;
+  }
+}
